@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Share
+
+# Model Form Field configuration
+form: @/plugins/hariadi/share/models/share/fields.yaml
+
+# Model Class name
+modelClass: Hariadi\Share\Models\Share
+
+# Default redirect location
+defaultRedirect: hariadi/share/share
+
+# Create page
+create:
+    title: Create Share
+    redirect: hariadi/share/share/update/:id
+    redirectClose: hariadi/share/share
+
+# Update page
+update:
+    title: Edit Share
+    redirect: hariadi/share/share
+    redirectClose: hariadi/share/share
+
+# Preview page
+preview:
+    title: Preview Share

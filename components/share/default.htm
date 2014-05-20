@@ -1,0 +1,25 @@
+<div class="oc-share">
+    <div class="btn-group">
+      <button class="btn btn-default btn-xs disabled">Share:</button> 
+
+      	{% if facebook %}
+        <a class="btn btn-default btn-xs" target="_blank" title="On Facebook" href="http://www.facebook.com/sharer.php?u={{url}}">
+            <i class="icon-facebook"></i>
+        </a>
+        {% endif %}
+
+        {% if twitter %}
+        <a class="btn btn-default btn-xs" target="_blank" title="On Twitter" href="http://twitter.com/share?url={{url}}">
+            <i class="icon-twitter"></i>
+        </a>
+        {% endif %}
+
+        {% if googleplus %}
+        <a class="btn btn-default btn-xs" target="_blank" title="On Google Plus" href="https://plus.google.com/share?url={{url}}">
+            <i class="icon-google-plus"></i>
+        </a>
+        {% endif %}
+        
+    </div>
+</div>
+ 

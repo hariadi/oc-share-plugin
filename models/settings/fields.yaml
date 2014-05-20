@@ -1,0 +1,23 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+
+  facebook:
+    span: left
+    label: Facebook
+    comment: Enable for Facebook
+    type: switch
+
+  twitter:
+    span: left
+    label: Twitter
+    comment: Enable for Twitter
+    type: switch
+
+  googleplus:
+    span: left
+    label: Google Plus
+    comment: Enable for Google Plus
+    type: switch
