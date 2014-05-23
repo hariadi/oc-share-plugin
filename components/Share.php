@@ -6,6 +6,12 @@ use Illuminate\Support\Facades\Request as Request;
 
 class Share extends ComponentBase
 {
+    protected $providers = array(
+        'facebook',
+        'twitter',
+        'googleplus'
+    );
+
     public function componentDetails()
     {
         return [
@@ -20,11 +26,25 @@ class Share extends ComponentBase
 
         $this->addCss('/plugins/hariadi/share/assets/css/share.css');
 
-        $this->page['facebook'] = $settings->facebook;
-        $this->page['twitter'] = $settings->twitter;
-        $this->page['googleplus'] = $settings->googleplus;
+        foreach ($this->providers as $provider) {
+            $this->page[$provider] = $settings->$provider;
+        }
           
         $this->page['url'] = Request::url();
+    }
+
+    public function onRender()
+    {
+        foreach ($this->providers as $provider) {
+            $this->page[$provider] = self::config($this->property($provider));
+        }
+    }
+
+    private function config($config = 'true') {
+        if (empty($config)) {
+            $config = 'true';
+        }
+        return filter_var($config, FILTER_VALIDATE_BOOLEAN);
     }
 
 }

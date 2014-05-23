@@ -1,1 +1,6 @@
+1.0.2:
+    - Support onRender
+    - Remove unused method
+    - Update documentation
+
 1.0.1: First version of Share

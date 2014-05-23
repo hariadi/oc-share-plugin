@@ -9,7 +9,7 @@ This plugin adds social share features to your [OctoberCMS](http://octobercms.co
 
 > Social Share for Blog Post required the [RainLab Blog](http://octobercms.com/plugin/rainlab-blog) plugin. The plugin was tested with with default `demo` theme.
 
-## Adding the share button to Blog Post
+## Adding the share button
 
 To add the plugin's share code to your website just drop the `Share Component` to your CMS page or blog post and add `{% component 'shares' %}` code to after the page/blog post tag:
 
@@ -58,7 +58,11 @@ function onEnd()
 ```
 
 ## Manage Social Share Plugin
-You can enable/disable social media provider in the back panel, go to `System -> Settings` and look for the section named `Social Share`.
+You can globally enable/disable social media provider in the back panel, go to `System -> Settings` and look for the section named `Social Share`. Social Share also can take parameter to override media social individually.
+
+```
+{% component 'shares' facebook="false" %}
+```
 
 ## Supported
 
