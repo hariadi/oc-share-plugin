@@ -14,6 +14,7 @@ class Settings extends Model
         $this->facebook = true;
         $this->twitter = true;
         $this->googleplus = true;
+        $this->tumblr = true;
     }
 
 }
