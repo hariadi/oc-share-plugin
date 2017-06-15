@@ -21,3 +21,9 @@ fields:
     label: Google Plus
     comment: Enable for Google Plus
     type: switch
+    
+  tumblr:
+    span: left
+    label: Tumblr
+    comment: Enable for Tumblr
+    type: switch    
