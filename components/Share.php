@@ -9,7 +9,8 @@ class Share extends ComponentBase
     protected $providers = array(
         'facebook',
         'twitter',
-        'googleplus'
+        'googleplus',
+        'tumblr'
     );
 
     public function componentDetails()
