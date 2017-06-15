@@ -13,5 +13,6 @@ class Share
         $this->facebook = $settings->facebook;
         $this->twitter = $settings->twitter;
         $this->googleplus = $settings->googleplus;
+        $this->tumblr = $settings->tumblr;
     }
 }
