@@ -6,12 +6,15 @@ use Illuminate\Support\Facades\Request as Request;
 
 class Share extends ComponentBase
 {
-    protected $providers = array(
+    protected $providers = [
         'facebook',
         'twitter',
         'googleplus',
-        'tumblr'
-    );
+        'tumblr',
+        'linkedin',
+        'reddit',
+        'digg',
+    ];
 
     public function componentDetails()
     {
@@ -21,6 +24,24 @@ class Share extends ComponentBase
         ];
     }
 
+    public function defineProperties()
+    {
+        $providers = [];
+        $settings = Settings::instance();
+
+        foreach ($this->providers as $provider) {
+            $providers[$provider] = [
+                'title'       => ucfirst($provider),
+                'description' => 'Enable social share button for ' . ucfirst($provider),
+                'type'        => 'checkbox',
+                'default'     => $settings->$provider,
+                'group'       => 'Providers',
+            ];
+        }
+
+        return $providers;
+    }
+
     public function onRun()
     {
         $settings = Settings::instance();
@@ -28,23 +49,20 @@ class Share extends ComponentBase
         $this->addCss('/plugins/hariadi/share/assets/css/share.css');
 
         foreach ($this->providers as $provider) {
-            $this->page[$provider] = $settings->$provider;
+            $this->page[$provider] = $this->property($provider) ?: $settings->$provider;
         }
-          
+
         $this->page['url'] = Request::url();
     }
 
     public function onRender()
     {
         foreach ($this->providers as $provider) {
-            $this->page[$provider] = self::config($this->property($provider));
+            $this->page[$provider] = $this->checkConfig($this->property($provider));
         }
     }
 
-    private function config($config = 'true') {
-        if (empty($config)) {
-            $config = 'true';
-        }
+    private function checkConfig($config = '1') {
         return filter_var($config, FILTER_VALIDATE_BOOLEAN);
     }
 

@@ -21,9 +21,27 @@ fields:
     label: Google Plus
     comment: Enable for Google Plus
     type: switch
-    
+
   tumblr:
     span: left
     label: Tumblr
     comment: Enable for Tumblr
-    type: switch    
+    type: switch
+
+  linkedin:
+    span: left
+    label: LinkedIn
+    comment: Enable for LinkedIn
+    type: switch
+
+  reddit:
+    span: left
+    label: Reddit
+    comment: Enable for Reddit
+    type: switch
+
+  digg:
+    span: left
+    label: Digg
+    comment: Enable for Digg
+    type: switch

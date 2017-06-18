@@ -1,3 +1,7 @@
+1.1.0:
+    - Add LinkedIn, Reddit and Digg (icon dependent)
+    - Enable/Disable provider from component setting
+
 1.0.3:
     - Add Tumblr (@bkrajendra)
     - Typo

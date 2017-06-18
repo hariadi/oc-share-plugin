@@ -18,7 +18,7 @@ From your October root directory, type:
 php artisan plugin:install Hariadi.Share
 ```
 
-> Social Share for Blog Post required the [RainLab Blog](http://octobercms.com/plugin/rainlab-blog) plugin. The plugin was tested with with default `demo` theme.
+> Social Share for Blog Post recommended the [RainLab Blog](https://github.com/rainlab/blog-plugin) plugin. The plugin was tested with with default `demo` theme.
 
 ## Adding the share button
 
@@ -75,9 +75,12 @@ You can globally enable/disable social media provider in the back panel, go to `
 {% component 'shares' facebook="false" %}
 ```
 
+To enable/disable per page/post, choose your desired provider from list in component setting.
+
 ## Supported
 
  * Facebook
  * Twitter
  * Google Plus
+ * Tummblr
  * .. more to come! [Request](https://github.com/hariadi/oc-share-plugin/issues/new)

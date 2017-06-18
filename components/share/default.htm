@@ -1,15 +1,15 @@
 <div class="oc-share">
     <div class="btn-group">
-      <button class="btn btn-default btn-xs disabled">Share:</button> 
+      <button class="btn btn-default btn-xs disabled">Share:</button>
 
       	{% if facebook %}
-        <a class="btn btn-default btn-xs" target="_blank" title="On Facebook" href="http://www.facebook.com/sharer.php?u={{url}}">
+        <a class="btn btn-default btn-xs" target="_blank" title="On Facebook" href="https://www.facebook.com/sharer.php?u={{url}}">
             <i class="icon-facebook"></i>
         </a>
         {% endif %}
 
         {% if twitter %}
-        <a class="btn btn-default btn-xs" target="_blank" title="On Twitter" href="http://twitter.com/share?url={{url}}">
+        <a class="btn btn-default btn-xs" target="_blank" title="On Twitter" href="https://twitter.com/share?url={{url}}&text={{ this.page.title }}">
             <i class="icon-twitter"></i>
         </a>
         {% endif %}
@@ -21,10 +21,28 @@
         {% endif %}
 
         {% if tumblr %}
-        <a class="btn btn-default btn-xs" target="_blank" title="On Tumblr" href="http://www.tumblr.com/share/link?url={{url}}">
+        <a class="btn btn-default btn-xs" target="_blank" title="On Tumblr" href="https://www.tumblr.com/share/link?url={{url}}&title={{ this.page.title }}">
             <i class="icon-tumblr"></i>
+        </a>
+        {% endif %}
+
+        {% if linkedin %}
+        <a class="btn btn-default btn-xs" target="_blank" title="On LinkedIn" href="https://www.linkedin.com/shareArticle?url={{url}}&title={{ this.page.title }}">
+            <i class="icon-linkedin"></i>
+        </a>
+        {% endif %}
+
+        {% if reddit %}
+        <a class="btn btn-default btn-xs" target="_blank" title="On Reddit" href="https://reddit.com/submit?url={{url}}&title={{ this.page.title }}">
+            <i class="icon-reddit"></i>
+        </a>
+        {% endif %}
+
+        {% if digg %}
+        <a class="btn btn-default btn-xs" target="_blank" title="On Digg" href="http://digg.com/submit?url={{url}}&title={{ this.page.title }}">
+            <i class="icon-digg"></i>
         </a>
         {% endif %}
     </div>
 </div>
- 
+
