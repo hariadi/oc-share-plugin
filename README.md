@@ -3,9 +3,20 @@
 This plugin adds social share features to your [OctoberCMS](http://octobercms.com) blog post.
 
 ## Installation
-1. In the backend panel, go to `System -> Updates`.
-2. In the box to the left of `Install Plugin`, type `Hariadi.Share`
-3. Click `Install Plugin`.
+
+Backend Admin
+
+1. In the backend panel, go to `System -> Updates & Plugins`.
+2. Click `Install Plugin`, type `Hariadi.Share` or `Social Share`
+3. Choose `Social Share` and the plugin should be installed.
+
+Console
+
+From your October root directory, type:
+
+```bash
+php artisan plugin:install Hariadi.Share
+```
 
 > Social Share for Blog Post required the [RainLab Blog](http://octobercms.com/plugin/rainlab-blog) plugin. The plugin was tested with with default `demo` theme.
 

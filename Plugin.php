@@ -17,7 +17,7 @@ class Plugin extends PluginBase
     {
         return [
             'name'        => 'Social Share',
-            'description' => 'Provides share button to blog post .',
+            'description' => 'Provides share button to blog post.',
             'author'      => 'Hariadi Hinta',
             'icon'        => 'icon-share-alt-square'
         ];
